@@ -10,7 +10,7 @@
                       </div>
                       <div class="col-5 col-sm-7 col-xl-8 p-0">
                         <h5>HELLO, {{session('vendor')}}</h5>
-                        <h4 class="mb-1 mb-sm-0">WELCOME TO WEAR WISE</h4>
+                        <h4 class="mb-1 mb-sm-0">WELCOME TO RENT KORO</h4>
                       
                         <p class="mb-0 font-weight-normal d-none d-sm-block">Get started managing your buisness</p>
                       </div>
@@ -86,7 +86,7 @@
 
 
 
-            <!--New card wear wise sales-->
+            <!--New card rent koro sales-->
             @php
 
 
@@ -222,9 +222,9 @@
           <!-- partial:partials/_footer.html -->
           <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">WearWise <br> Wear all wear wise</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">RENT KORO <br> Rent korei dekho</span>
 
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Contact<br> Email: wearwise@gmail.com <br> Phone: +8801928363 <br>Address: Brac University, Dhaka, Bangldadesh </span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Contact<br> Email: rentkoro@gmail.com <br> Phone: +8801928363 <br>Address: Brac University, Dhaka, Bangldadesh </span>
             </div>
           </footer>
           <!-- partial -->

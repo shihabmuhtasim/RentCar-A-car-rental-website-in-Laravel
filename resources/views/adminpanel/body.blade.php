@@ -10,7 +10,7 @@
                       </div>
                       <div class="col-5 col-sm-7 col-xl-8 p-0">
                         <h5>HELLO, {{session('admin')}}</h5>
-                        <h4 class="mb-1 mb-sm-0">WELCOME TO WEAR WISE</h4>
+                        <h4 class="mb-1 mb-sm-0">WELCOME TO RENT KORO</h4>
                       
                         <p class="mb-0 font-weight-normal d-none d-sm-block">Get started managing your buisness</p>
                       </div>
@@ -143,7 +143,7 @@ $userCount = $cus_data->count();
 
 
 
-            <!--New card wear wise sales-->
+            <!--New card rent koro sales-->
 @php
 
     
@@ -152,7 +152,7 @@ $userCount = $cus_data->count();
               <div class="col-sm-4 grid-margin">
                 <div class="card">
                   <div class="card-body">
-                    <h5>Wear wise sales</h5>
+                    <h5>Totals rents</h5>
                     <div class="row">
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">

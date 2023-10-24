@@ -69,11 +69,11 @@
           </li>
           
           <li class="nav-item menu-items">
-            <a class="nav-link" href="{{url('add_apparel')}}">
+            <a class="nav-link" href="{{url('add_brand')}}">
               <span class="menu-icon">
                 <i class="mdi mdi-table-large"></i>
               </span>
-              <span class="menu-title">Manage Apparel</span>
+              <span class="menu-title">Manage Brands</span>
             </a>
           </li>
           <li class="nav-item menu-items">

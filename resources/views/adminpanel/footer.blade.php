@@ -43,20 +43,20 @@
 
 <div class="footer">
     <div class="footer-heading" colour="black">
-        WEAR WISE
+        RENT KORO
     </div>
     <div class="footer-section">
         <div class="footer-section__column">
             <h2 class="footer-section__title">About Us</h2>
             <p class="footer-section__content">
-                We are an online clothing rental brand where you can find a solution to all your clothing needs at just the right price for the right occasion.
+                We are a platform where you can rent a car from or give your car for rent.
             </p>
         </div>
         <div class="footer-section__column">
             <h2 class="footer-section__title">Contact Us</h2>
             <p class="footer-section__content">
                 Phone: +8801930438736<br>
-                Email: wearwise@gmail.com<br>
+                Email: rentkoro@gmail.com<br>
                 Address: Brac University, Mohakhali, Dhaka, Bangladesh
             </p>
         </div>

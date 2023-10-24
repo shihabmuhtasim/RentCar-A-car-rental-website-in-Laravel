@@ -45,8 +45,22 @@ Route :: get('/logout', function(){
 
 Route::middleware(['admin.auth'])->group(function () {
     Route::get('/admin_dashboard', [admin_content_controller::class, 'index']);
+
+    Route :: get('/add_catagory',[admin_content_controller::class,'view_catagory']);
+    Route :: post('/add_catagory',[admin_content_controller::class,'add_catagory']);
+    Route :: get('/delete_catagory/{id}',[admin_content_controller::class,'delete_catagory']);
+
+    Route :: get('/add_brand',[admin_content_controller::class,'view_brand']);
+    Route :: post('/add_brand',[admin_content_controller::class,'add_brand']);
+    Route :: get('/delete_brand/{id}',[admin_content_controller::class,'delete_brand']);
+
+    Route :: get('/view_product',[admin_content_controller::class,'view_product']);
+    Route :: post('/add_product',[admin_content_controller::class,'add_product']);
+    Route :: get('/show_products',[admin_content_controller::class,'show_products']);
     // Add other routes handled by admin_content_controller here...
-    
+    Route :: get('/edit_product/{product_id}',[admin_content_controller::class,'edit_product']);
+    Route :: post('/update_product/{product_id}',[admin_content_controller::class,'update_product']);
+    Route :: get('/delete_product/{product_id}',[admin_content_controller::class,'delete_product']);
 
     
     Route :: get('/show_vendors',[admin_content_controller::class,'show_vendors']);
@@ -92,7 +106,7 @@ Route :: get('/userlogout', function(){
 });
 
 
-//Nusaiba Module 2
+
 Route::get('/guestuser', [HomeController::class, 'index2']);
 
 
