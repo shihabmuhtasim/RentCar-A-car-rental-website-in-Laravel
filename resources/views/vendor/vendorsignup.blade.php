@@ -113,9 +113,9 @@
 
     <footer class="footer">
             <div class="d-sm-flex justify-content-center justify-content-sm-between">
-              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">WearWise <br> Wear all wear wise</span>
+              <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Rent koro <br> Rent korei dekho</span>
 
-              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Contact<br> Email: wearwise@gmail.com <br> Phone: +8801928363 <br>Address: Brac University, Dhaka, Bangldadesh </span>
+              <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> Contact<br> Email: rentkoro@gmail.com <br> Phone: +8801928363 <br>Address: Brac University, Dhaka, Bangldadesh </span>
             </div>
           </footer>
   </body>
