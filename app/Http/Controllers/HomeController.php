@@ -23,6 +23,7 @@ class HomeController extends Controller
 {
     public function index()
     {
+
         $product_data = products::with('catagory')->get();
         $cat_data = Catagories::all();
         $cus_data = UserSignup::all();
@@ -45,13 +46,36 @@ class HomeController extends Controller
         $catagory = catagories::find($catagory_id);
         return view('home.show_category', compact('cars', 'catagory'));
     }
-
+    public function all_catagories()
+    {
+        $cat_data = Catagories::all();
+        return view('home.all_catagories', compact('cat_data'));
+    }
     public function product_details($product_id)
-    { 
+    {
         $product = Products::with('brand')->find($product_id);
         return view('home.product_details', compact('product'));
-        
+
     }
+    public function product_search(Request $request)
+    {
+        $searchText = $request->search;
+
+        $cartProductIds = Cart::pluck('product_id')->toArray();
+
+        $products = products::with('catagory')
+            ->where(function ($query) use ($searchText) {
+                $query->where('product_title', 'like', '%' . $searchText . '%')
+                    ->orWhereHas('catagory', function ($catQuery) use ($searchText) {
+                        $catQuery->where('catagory_name', 'like', '%' . $searchText . '%');
+                    });
+            })
+            ->whereNotIn('product_id', $cartProductIds)
+            ->get();
+
+        return view('home.all_product', compact('products'));
+    }
+
 
     public function book_product($product_id)
     {
@@ -60,7 +84,10 @@ class HomeController extends Controller
     }
     public function all_cars()
     {
-        $products = products::with('catagory')->get();
+        $cartProductIds = Cart::pluck('product_id')->toArray();
+
+        // Retrieve products that are not in the cart
+        $products = products::with('catagory')->whereNotIn('product_id', $cartProductIds)->get();
         return view('home.all_product', compact('products'));
     }
 
@@ -107,7 +134,7 @@ class HomeController extends Controller
 
             Alert::success('Product Added Successfully', 'We have added product to the cart');
 
-            return redirect()->back();
+            return redirect()->back()->with('message', 'Product Added Successfully. We have added product to the cart');
         } else {
             // User is not authenticated
             return redirect('userlogin');

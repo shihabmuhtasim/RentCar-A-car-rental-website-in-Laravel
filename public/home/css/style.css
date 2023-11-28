@@ -4929,7 +4929,7 @@ input[type="button"].btn-block {
   background-size: 100% 100%;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 200.98px) {
 
   .navbar-expand-sm>.container,
   .navbar-expand-sm>.container-fluid {
@@ -9473,7 +9473,7 @@ button.bg-dark:focus {
 
 .pb-5,
 .py-5 {
-  padding-bottom: 3rem !important;
+  padding-bottom: 20rem !important;
 }
 
 .pl-5,
@@ -12051,7 +12051,7 @@ h5,
 }
 
 .hero-wrap.hero-wrap-2 {
-  height: 600px !important;
+  height: 350px !important;
   position: relative;
 }
 

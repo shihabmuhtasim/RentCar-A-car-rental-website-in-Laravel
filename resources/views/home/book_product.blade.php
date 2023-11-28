@@ -24,7 +24,11 @@
 
 <body>
 
+    @if(session('user'))
     @include('home.header')
+    @else
+    @include('home.header2')
+    @endif
     <!-- END nav -->
     <section class="hero-wrap hero-wrap-2 js-fullheight"
         style="background-image: url('added_products/{{$product->image}}'); background-size: cover; height: 150px;"
@@ -143,16 +147,16 @@
 
                                 <!-- contents here -->
                                 <style>
-                                    .centered-list {
-                                        text-align: center;
-                                        list-style-type: none;
-                                        padding: 0;
-                                    }
+                                .centered-list {
+                                    text-align: center;
+                                    list-style-type: none;
+                                    padding: 0;
+                                }
 
-                                    .centered-list li {
-                                        margin: 10px 0;
-                                        font-size: 18px;
-                                    }
+                                .centered-list li {
+                                    margin: 10px 0;
+                                    font-size: 18px;
+                                }
                                 </style>
 
                                 <div class="text-center">
@@ -161,9 +165,9 @@
                                         <li>- Lisence: {{$product->product_lisence}}</li>
                                         <li>- Minimum rent time: {{$product->days}} days</li>
                                         <style>
-                                            .green-text {
-                                                color: green;
-                                            }
+                                        .green-text {
+                                            color: green;
+                                        }
                                         </style>
                                         <li class="green-text">- Original price: <del>{{$product->price}}</del> BDT</li>
                                         <li class="green-text">- Discounted price: {{$product->discounted_price}} BDT

@@ -24,7 +24,11 @@
 
 <body>
 
+    @if(session('user'))
     @include('home.header')
+    @else
+    @include('home.header2')
+    @endif
     <!-- END nav -->
 
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('home/images/bac1.jpg');"
@@ -44,10 +48,37 @@
 
 
     <section class="ftco-section bg-light">
+        @if(session()->has('message'))
+
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+            {{session()->get('message')}}
+
+        </div>
+        @endif
+
+        <div style="padding-left: 500px; padding-bottom: 50px;">
+            <form action="{{url('product_search')}}" method="GET">
+                @csrf
+                <input type="text" name="search" placeholder="Search for Cars">
+                <input type="submit" value="search" class="btn btn-outline-primary">
+            </form>
+        </div>
         <div class="container">
+
+            @if($products->isEmpty())
+            <div class="d-flex justify-content-center align-items-center flex-column">
+                <div class="alert alert-info" role="alert">
+                    No products found.
+                </div>
+                <a href="{{ url()->previous() }}" class="btn btn-primary mt-3">Go Back</a>
+            </div>
+            @else
+
             <div class="row">
                 @foreach($products as $product)
                 <div class="col-md-4">
+
                     <div class="car-wrap rounded ftco-animate">
                         <div class="img rounded d-flex align-items-end"
                             style="background-image: url('added_products/{{$product->image}}');">
@@ -73,13 +104,13 @@
                                 <a href="{{url('product_details', $product->product_id)}}"
                                     class="btn btn-secondary py-2 ml-1">Details</a>
                             </p>
-
                         </div>
                     </div>
+
                 </div>
                 @endforeach
-
             </div>
+            @endif
             <div class="row mt-5">
                 <div class="col text-center">
                     <div class="block-27">

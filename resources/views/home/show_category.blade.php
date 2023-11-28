@@ -23,7 +23,11 @@
 </head>
 
 <body>
+    @if(session('user'))
     @include('home.header')
+    @else
+    @include('home.header2')
+    @endif
     <!-- END nav -->
 
     <section class="hero-wrap hero-wrap-2 js-fullheight" style="background-image: url('home/images/background.png');"
