@@ -47,9 +47,10 @@ class HomeController extends Controller
     }
 
     public function product_details($product_id)
-    {
+    { 
         $product = Products::with('brand')->find($product_id);
         return view('home.product_details', compact('product'));
+        
     }
 
     public function book_product($product_id)

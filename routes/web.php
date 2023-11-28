@@ -95,15 +95,16 @@ Route::post('/userlogin', [UserSignupController::class, 'user_login']);
 
 
 //test auth user
-
+Route::get("/product_details/{product_id}", [HomeController::class, "product_details"]);
+Route::get("/show_category/{catagory_id}", [HomeController::class, "catagory"]);
 Route::middleware(['user.auth'])->group(function () {
 
 
     Route::get('/test1', [admin_content_controller::class, 'view_test1']);
 
     Route::get('/', [HomeController::class, 'index']);
-    Route::get("/product_details/{product_id}", [HomeController::class, "product_details"]);
-    Route::get("/show_category/{catagory_id}", [HomeController::class, "catagory"]);
+    
+    
     Route::get("/book_product/{product_id}", [HomeController::class, 'book_product']);
 
 
