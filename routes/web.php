@@ -30,7 +30,9 @@ Route::post("/add_cart/{product_id}", [HomeController::class, "add_cart"]);
 Route::get("/show_cart", [HomeController::class, "show_cart"]);
 route::get('/remove_cart/{id}', [HomeController::class, 'remove_cart']);
 route::get('/cash_order', [HomeController::class, 'cash_order']);
+route::get('/all_catagories', [HomeController::class, 'all_catagories']);
 
+route::get('/product_search', [HomeController::class, 'product_search']);
 
 //Shihab
 
@@ -103,8 +105,8 @@ Route::middleware(['user.auth'])->group(function () {
     Route::get('/test1', [admin_content_controller::class, 'view_test1']);
 
     Route::get('/', [HomeController::class, 'index']);
-    
-    
+
+
     Route::get("/book_product/{product_id}", [HomeController::class, 'book_product']);
 
 

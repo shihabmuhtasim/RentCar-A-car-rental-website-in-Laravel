@@ -72,14 +72,13 @@
 <body>
     <!-- start nav -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <a class="navbar-brand" href="#">RentKoro</a>
+        <a class="navbar-brand" href="{{url('/')}}">RentKoro</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
             aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-            <!-- Your navigation links go here -->
 
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
@@ -92,7 +91,6 @@
                 <li class="nav-item"><a href="{{url('show_cart')}}" class="nav-link">Cart</a></li>
                 <li class="nav-item"><a href="{{url('/userlogout')}}" class="btn btn-danger">Logout</a></li>
             </ul>
-            <!-- </div> -->
         </div>
     </nav>
 
