@@ -17,10 +17,13 @@ class admin_content_controller extends Controller
 
     public function index(){
         
+        $order_data= Order::all();
+        $product_data=products::all();
         $cus_data=UserSignup::all();
+        $w_order= Order:: where('vendor_name', 'Rent Koro')->get();
         
           
-        return view('adminpanel.admin_dashboard',compact('cus_data'));
+        return view('adminpanel.admin_dashboard',compact('order_data', 'product_data', 'cus_data','w_order'));
             
         }
 //catagory

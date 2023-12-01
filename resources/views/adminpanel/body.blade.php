@@ -25,7 +25,7 @@
 <!--New card Total prods-->
 @php
 
-    
+    $proCount = $product_data->count();
 @endphp
 
 
@@ -36,7 +36,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0"> Types</h3>
+                          <h3 class="mb-0"> {{ $proCount }} cars</h3>
                         </div>
                       </div>
                       <div class="col-3">
@@ -45,7 +45,7 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Total Product Types</h6>
+                    <h6 class="text-muted font-weight-normal">Total cars</h6>
                   </div>
                 </div>
               </div>
@@ -54,8 +54,9 @@
 
             <!--New card orders total-->
 
-@php
+            @php
 
+$orderCount = $order_data->count();
 @endphp
 
 
@@ -65,7 +66,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0"> Orders</h3>
+                          <h3 class="mb-0">{{ $orderCount }} Orders</h3>
                         </div>
                       </div>
                       <div class="col-3">
@@ -80,9 +81,9 @@
               </div>
        <!--New card order amount-->
 
-@php
+       @php
 
-
+$totalPrice = $order_data->sum('price');
 @endphp
 
 
@@ -94,7 +95,7 @@
                     <div class="row">
                       <div class="col-9">
                         <div class="d-flex align-items-center align-self-start">
-                          <h3 class="mb-0"> TK</h3>
+                          <h3 class="mb-0">{{ $totalPrice }} TK</h3>
               
                         </div>
                       </div>
@@ -106,16 +107,16 @@
                         </div>
                       </div>
                     </div>
-                    <h6 class="text-muted font-weight-normal">Total sale</h6>
+                    <h6 class="text-muted font-weight-normal">Total rent revenue</h6>
                   </div>
                 </div>
               </div>
 
 
               <!--New card total user-->
-@php
+              @php
 $userCount = $cus_data->count();
-@endphp 
+@endphp  
               <div class="col-xl-3 col-sm-6 grid-margin stretch-card">
                 <div class="card">
                   <div class="card-body">
@@ -144,9 +145,9 @@ $userCount = $cus_data->count();
 
 
             <!--New card rent koro sales-->
-@php
+            @php
 
-    
+$w_Price = $w_order->sum('price');
 @endphp
             <div class="row">
               <div class="col-sm-4 grid-margin">
@@ -156,10 +157,10 @@ $userCount = $cus_data->count();
                     <div class="row">
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">TK</h2>
+                          <h2 class="mb-0">{{$w_Price}} TK</h2>
                 
                         </div>
-                        <h6 class="text-muted font-weight-normal">Original wearwise sales</h6>
+                        <h6 class="text-muted font-weight-normal">Original RENT KORO earning</h6>
                       </div>
                       <div class="col-4 col-sm-12 col-xl-4 text-center text-xl-right">
                         <i class="icon-lg mdi mdi-codepen text-primary ml-auto"></i>
@@ -168,7 +169,10 @@ $userCount = $cus_data->count();
                   </div>
                 </div>
               </div>
-@php
+              @php
+$t_Price = $order_data->sum('price');
+$w_Price = $w_order->sum('price');
+$vp_sale= $t_Price-$w_Price
 
 @endphp
               <div class="col-sm-4 grid-margin">
@@ -178,7 +182,7 @@ $userCount = $cus_data->count();
                     <div class="row">
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">TK</h2>
+                          <h2 class="mb-0">{{$vp_sale}} TK</h2>
                         </div>
                         <h6 class="text-muted font-weight-normal"> Vendor partner sales</h6>
                       </div>
@@ -191,8 +195,10 @@ $userCount = $cus_data->count();
               </div>
               <!--New card-->
 
-@php
-
+              @php
+$t_Price1 = $order_data->sum('price');
+$w_Price2 = $w_order->sum('price');
+$vp_sale3= ($t_Price1-$w_Price2)*0.1
 @endphp
               <div class="col-sm-4 grid-margin">
                 <div class="card">
@@ -201,7 +207,7 @@ $userCount = $cus_data->count();
                     <div class="row">
                       <div class="col-8 col-sm-12 col-xl-8 my-auto">
                         <div class="d-flex d-sm-block d-md-flex align-items-center">
-                          <h2 class="mb-0">TK</h2>
+                          <h2 class="mb-0">{{$vp_sale3}} TK</h2>
 
                         </div>
                         <h6 class="text-muted font-weight-normal">10%commision on each sale</h6>
