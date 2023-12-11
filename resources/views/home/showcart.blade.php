@@ -21,49 +21,49 @@
     <link rel="stylesheet" href="home/css/icomoon.css">
     <link rel="stylesheet" href="home/css/style.css">
     <style type="text/css">
-        .center {
-            margin: auto;
-            width: 50%;
-            text-align: center;
-            padding: 30px;
-        }
+    .center {
+        margin: auto;
+        width: 50%;
+        text-align: center;
+        padding: 30px;
+    }
 
-        table,
-        th,
-        td {
-            border: 0.1pc solid grey;
-        }
+    table,
+    th,
+    td {
+        border: 0.1pc solid grey;
+    }
 
-        .th_deg {
-            font-size: 20px;
-            padding: 5px;
-            background: skyblue;
-        }
+    .th_deg {
+        font-size: 20px;
+        padding: 5px;
+        background: skyblue;
+    }
 
-        .img_deg {
-            height: 150px;
-            width: 250px;
-            padding: 5px;
+    .img_deg {
+        height: 150px;
+        width: 250px;
+        padding: 5px;
 
-        }
+    }
 
-        .total_deg {
-            font-size: 20px;
-            padding: 40px;
-        }
+    .total_deg {
+        font-size: 20px;
+        padding: 40px;
+    }
     </style>
     <style>
-        body {
-            padding-top: 100px;
-            /* Adjust this value based on your navbar height */
-        }
+    body {
+        padding-top: 100px;
+        /* Adjust this value based on your navbar height */
+    }
 
-        /* Additional styling for better visibility of the fixed-top navbar */
-        nav.navbar.fixed-top {
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            /* Set a high z-index value */
-        }
+    /* Additional styling for better visibility of the fixed-top navbar */
+    nav.navbar.fixed-top {
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        /* Set a high z-index value */
+    }
     </style>
 
 
@@ -81,13 +81,11 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="{{url('/')}}" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-                <li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+                <li class="nav-item"><a href="{{url('/all_catagories')}}" class="nav-link">Categories</a></li>
                 <li class="nav-item"><a href="{{url('/all_cars')}}" class="nav-link">Cars</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="{{url('/profile')}}" class="nav-link">Profile</a></li>
                 <li class="nav-item"><a href="{{url('show_cart')}}" class="nav-link">Cart</a></li>
                 <li class="nav-item"><a href="{{url('/userlogout')}}" class="btn btn-danger">Logout</a></li>
             </ul>

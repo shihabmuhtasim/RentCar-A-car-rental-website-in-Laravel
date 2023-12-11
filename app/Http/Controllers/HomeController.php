@@ -159,7 +159,52 @@ class HomeController extends Controller
         return redirect()->back();
     }
 
+    public function profile()
+    {
+        $username = session('user');
+        $user = UserSignup::where('username', $username)->first();
 
+        return view('home.profile', compact('user'));
+    }
+    public function profile_edit()
+    {
+        $username = session('user');
+        $user = UserSignup::where('username', $username)->first();
+        return view('home.profile_edit', compact('user'));
+    }
+    public function profile_update(Request $request, $id)
+    {
+        $username = session('user');
+        $user = UserSignup::where('username', $username)->first();
+        $user->username = $request->username;
+        $user->name = $request->name;
+
+        $user->phone = $request->phone;
+        $user->address = $request->address;
+        $user->save();
+        return redirect('profile');
+    }
+
+    public function show_order()
+    {
+        $username = session('user');
+        $order = order::where('username', '=', $username)->get();
+        return view('home.order', compact('order'));
+    }
+    public function cancel_order($id)
+    {
+        $order = order::find($id);
+        $order->delivery_status = 'Your order have been canceled';
+        $order->save();
+        return redirect()->back();
+
+    }
+    public function print_pdf($id)
+    {
+        $order = order::find($id);
+        $pdf = PDF::loadView('home.pdf', compact('order'));
+        return $pdf->download('order_details.pdf');
+    }
     public function cash_order()
     {
         $store = session('user'); // Assuming $store holds the username
@@ -189,6 +234,7 @@ class HomeController extends Controller
             $cart->delete();
 
         }
+
         return redirect()->back()->with('message', 'We have Received your Order. We will connect with you soon.....');
     }
 }
