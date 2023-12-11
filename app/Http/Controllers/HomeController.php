@@ -199,12 +199,7 @@ class HomeController extends Controller
         return redirect()->back();
 
     }
-    public function print_pdf($id)
-    {
-        $order = order::find($id);
-        $pdf = PDF::loadView('home.pdf', compact('order'));
-        return $pdf->download('order_details.pdf');
-    }
+   
     public function cash_order()
     {
         $store = session('user'); // Assuming $store holds the username
@@ -242,8 +237,45 @@ class HomeController extends Controller
 
     #payment gatewaya
     public function payment($totalprice)
-    {
+
+    {   
+        $store = session('user'); // Assuming $store holds the username
+        $data = cart::where('username', '=', $store)->get();
+
+        foreach ($data as $data) {
+            $order = new order;
+            $order->name = $data->name;
+            $order->email = $data->email;
+            $order->phone = $data->phone;
+            $order->address = $data->address;
+            $order->user_id = $data->user_id;
+            $order->username = $data->username;
+            $order->product_title = $data->product_title;
+            $order->price = $data->price;
+            $order->day = $data->day;
+            $order->image = $data->image;
+            $order->product_id = $data->product_id;
+            $order->vendor_name = $data->vendor_name;
+
+            $order->payment_status = 'cash on delivery';
+            $order->delivery_status = 'processing';
+            $order->save();
+
+            $cart_id = $data->id;
+            $cart = cart::find($cart_id);
+            $cart->delete();
+
+        }
         
-        return view('home.payment',compact('totalprice'));
+        
+        return view('home.payment',compact('totalprice','store'));
+    }
+
+    public function success()
+    {   
+        $store = session('user'); // Assuming $store holds the username
+        //dd($store);
+
+        return view('home.paysuccess');
     }
 }

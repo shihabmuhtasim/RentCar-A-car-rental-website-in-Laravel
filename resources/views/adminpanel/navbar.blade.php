@@ -18,7 +18,7 @@
 
         <li class="nav-item">
             <!-- the home button will navigate to welcome.php-->
-          <a class="nav-link active" aria-current="page" href="guestuser" style="font-weight: bold;">Home</a>
+          <a class="nav-link active" aria-current="page" href="/" style="font-weight: bold;">Home</a>
         </li>
 
         <li class="nav-item">

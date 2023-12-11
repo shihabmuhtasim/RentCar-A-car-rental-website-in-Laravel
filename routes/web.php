@@ -115,9 +115,14 @@ Route::get('/', [HomeController::class, 'index2']);
 Route::get("/product_details/{product_id}", [HomeController::class, "product_details"]);
 Route::get("/show_category/{catagory_id}", [HomeController::class, "catagory"]);
 
+
+Route::post("/success", [HomeController::class, 'success']);
 Route::middleware(['user.auth'])->group(function () {
+    
     Route::get('/userpage', [HomeController::class, 'index']);
-    route::get('/gateaway/{totalprice}',[HomeController::class,'payment']);
+    
+route::get('/gateaway/{totalprice}',[HomeController::class,'payment']);
+    
 
 
     Route::get('/test1', [admin_content_controller::class, 'view_test1']);
@@ -126,6 +131,8 @@ Route::middleware(['user.auth'])->group(function () {
 
 
     Route::get("/book_product/{product_id}", [HomeController::class, 'book_product']);
+
+    
 
 
 });
