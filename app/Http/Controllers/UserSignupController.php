@@ -68,7 +68,7 @@ public function get_login(){
         
                 $request->session()->put('user',$request['username']);
         
-                return redirect('');
+                return redirect('userpage');
             }
             else{
                 

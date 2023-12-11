@@ -21,49 +21,70 @@
     <link rel="stylesheet" href="home/css/icomoon.css">
     <link rel="stylesheet" href="home/css/style.css">
     <style type="text/css">
-    .center {
-        margin: auto;
-        width: 50%;
-        text-align: center;
-        padding: 30px;
-    }
+        /* Your existing styles */
+        .center {
+            margin: auto;
+            width: 50%;
+            text-align: center;
+            padding: 30px;
+        }
 
-    table,
-    th,
-    td {
-        border: 0.1pc solid grey;
-    }
+        table,
+        th,
+        td {
+            border: 0.1pc solid grey;
+        }
 
-    .th_deg {
-        font-size: 20px;
-        padding: 5px;
-        background: skyblue;
-    }
+        .th_deg {
+            font-size: 20px;
+            padding: 5px;
+            background: skyblue;
+        }
 
-    .img_deg {
-        height: 150px;
-        width: 250px;
-        padding: 5px;
+        .img_deg {
+            height: 150px;
+            width: 250px;
+            padding: 5px;
+        }
 
-    }
+        .total_deg {
+            font-size: 20px;
+            padding: 40px;
+        }
 
-    .total_deg {
-        font-size: 20px;
-        padding: 40px;
-    }
-    </style>
-    <style>
-    body {
-        padding-top: 100px;
-        /* Adjust this value based on your navbar height */
-    }
+        body {
+            padding-top: 100px;
+            /* Adjust this value based on your navbar height */
+        }
 
-    /* Additional styling for better visibility of the fixed-top navbar */
-    nav.navbar.fixed-top {
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 1000;
-        /* Set a high z-index value */
-    }
+        nav.navbar.fixed-top {
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            /* Set a high z-index value */
+        }
+
+        /* Additional styling for better visibility of the fixed-top navbar */
+        .payment-success-container {
+            text-align: center;
+            margin-top: 80px;
+            padding: 30px;
+            background-color: #dff0d8;
+            border: 1px solid #3c763d;
+            border-radius: 5px;
+        }
+
+        /* Style the "Return to Home" button */
+        .btn-return-home {
+            display: block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
     </style>
 
 
@@ -81,7 +102,7 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
 
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item active"><a href="{{url('/userpage')}}" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="{{url('/')}}" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="{{url('/all_catagories')}}" class="nav-link">Categories</a></li>
                 <li class="nav-item"><a href="{{url('/all_cars')}}" class="nav-link">Cars</a></li>
@@ -103,46 +124,12 @@
 
     @endif
 
-    <div class='center'>
-        <table>
-            <tr>
-                <th class='th_deg'>Car Name</th>
-                <th class='th_deg'>Image</th>
-                <th class='th_deg'>Booked days</th>
-                <th class='th_deg'>Price</th>
-                <th class='th_deg'>Action</th>
-            </tr>
-
-            <?php $totalprice=0; ?>
-            @foreach($cart as $item)
-            <tr>
-                <td>{{$item->product_title}}</td>
-                <td><img class='img_deg' src=" /added_products/{{$item->image}}" alt=""></td>
-                <td>{{$item->day}}</td>
-                <td>BDT {{$item->price}} </td>
-
-                <td><a class="btn btn-danger" onclick="return confirm('Are you sure to remove this car from booking?')"
-                        href="{{url('remove_cart',$item->id)}}">Remove</a>
-                </td>
-            </tr>
-
-            <?php $totalprice=$totalprice  + $item->price ?>
-            @endforeach
-        </table>
-        <div>
-            <h1 class="total_deg">Total Price : {{$totalprice}} BDT</h1>
-        </div>
-        <div class="buttons-container">
-            <a class="btn btn-primary" href="{{ url('/all_cars') }}">Continue Shopping</a>
-        </div>
-
-        <div>
-            <h1 style="font-size: 25px; padding-bottom: 15px;">Proceed to Order</h1>
-            <a href="{{url('cash_order')}}" class="btn btn-danger">Cash On delivery</a>
-            <a href="{{url('gateaway',$totalprice)}}" class="btn btn-danger">Pay Online</a>
-        </div>
+    <h1>PAYMENT SUCCESSFUL!!!</h1>
+    <div class="payment-success-container">
+        <h1>PAYMENT SUCCESSFUL!!!</h1>
+        <p>Your payment was successful. Thank you for choosing RentKoro!</p>
+        <a href="{{url('/userpage')}}" class="btn btn-return-home">Return to Home Page</a>
     </div>
-
 
 
 
@@ -177,3 +164,67 @@
 </body>
 
 </html>
+
+@php
+$val_id=urlencode($_POST['val_id']);
+$store_id=urlencode("rentk6577403462649");
+$store_passwd=urlencode("rentk6577403462649@ssl");
+$requested_url = ("https://sandbox.sslcommerz.com/validator/api/validationserverAPI.php?val_id=".$val_id."&store_id=".$store_id."&store_passwd=".$store_passwd."&v=1&format=json");
+
+$handle = curl_init();
+curl_setopt($handle, CURLOPT_URL, $requested_url);
+curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
+curl_setopt($handle, CURLOPT_SSL_VERIFYHOST, false); # IF YOU RUN FROM LOCAL PC
+curl_setopt($handle, CURLOPT_SSL_VERIFYPEER, false); # IF YOU RUN FROM LOCAL PC
+
+$result = curl_exec($handle);
+
+$code = curl_getinfo($handle, CURLINFO_HTTP_CODE);
+
+if($code == 200 && !( curl_errno($handle)))
+{
+
+	# TO CONVERT AS ARRAY
+	# $result = json_decode($result, true);
+	# $status = $result['status'];
+
+	# TO CONVERT AS OBJECT
+	$result = json_decode($result);
+
+	# TRANSACTION INFO
+	$status = $result->status;
+	$tran_date = $result->tran_date;
+	$tran_id = $result->tran_id;
+	$val_id = $result->val_id;
+	$amount = $result->amount;
+	$store_amount = $result->store_amount;
+	$bank_tran_id = $result->bank_tran_id;
+	$card_type = $result->card_type;
+
+	# EMI INFO
+	$emi_instalment = $result->emi_instalment;
+	$emi_amount = $result->emi_amount;
+	$emi_description = $result->emi_description;
+	$emi_issuer = $result->emi_issuer;
+
+	# ISSUER INFO
+	$card_no = $result->card_no;
+	$card_issuer = $result->card_issuer;
+	$card_brand = $result->card_brand;
+	$card_issuer_country = $result->card_issuer_country;
+	$card_issuer_country_code = $result->card_issuer_country_code;
+
+	# API AUTHENTICATION
+	$APIConnect = $result->APIConnect;
+	$validated_on = $result->validated_on;
+	$gw_version = $result->gw_version;
+    
+
+    
+    
+} else {
+
+	echo "Failed to connect with SSLCOMMERZ";
+}
+
+@endphp

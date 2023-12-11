@@ -31,7 +31,7 @@
                 @endif
 
                 <!-- TABLE-->
-                <h1 class="text-center text-white">Wear Wise Products</h1>
+                <h1 class="text-center text-white">Rent Koro Products</h1>
     <div class="table-responsive">
   <table class="table table-bordered mt-5">
   <thead class="bg-secondary text-light text-center">
