@@ -111,14 +111,18 @@ Route::post('/userlogin', [UserSignupController::class, 'user_login']);
 
 
 //test auth user
+Route::get('/', [HomeController::class, 'index2']);
 Route::get("/product_details/{product_id}", [HomeController::class, "product_details"]);
 Route::get("/show_category/{catagory_id}", [HomeController::class, "catagory"]);
+
 Route::middleware(['user.auth'])->group(function () {
+    Route::get('/userpage', [HomeController::class, 'index']);
+    route::get('/gateaway/{totalprice}',[HomeController::class,'payment']);
 
 
     Route::get('/test1', [admin_content_controller::class, 'view_test1']);
 
-    Route::get('/', [HomeController::class, 'index']);
+    
 
 
     Route::get("/book_product/{product_id}", [HomeController::class, 'book_product']);
@@ -137,7 +141,7 @@ Route::get('/userlogout', function () {
 
 
 
-Route::get('/guestuser', [HomeController::class, 'index2']);
+
 
 
 //m vendor Shihab

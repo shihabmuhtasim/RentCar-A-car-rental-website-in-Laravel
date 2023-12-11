@@ -237,4 +237,13 @@ class HomeController extends Controller
 
         return redirect()->back()->with('message', 'We have Received your Order. We will connect with you soon.....');
     }
+
+
+
+    #payment gatewaya
+    public function payment($totalprice)
+    {
+        
+        return view('home.payment',compact('totalprice'));
+    }
 }
