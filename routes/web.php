@@ -24,6 +24,12 @@ use App\Http\Controllers\HomeController;
 // Route::get("/product_details/{product_id}", [HomeController::class, "product_details"]);
 // Route::get("/show_category/{catagory_id}", [HomeController::class, "catagory"]);
 Route::get("/all_cars", [HomeController::class, "all_cars"]);
+Route::get("/profile", [HomeController::class, "profile"]);
+route::get('/profile_edit/{id}', [HomeController::class, 'profile_edit']);
+route::post('/profile_update/{id}', [HomeController::class, 'profile_update']);
+route::get('/show_order', [HomeController::class, 'show_order']);
+route::get('/cancel_order/{id}', [HomeController::class, 'cancel_order']);
+route::get('/print_pdf/{id}', [HomeController::class, 'print_pdf']);
 
 Route::post("/add_cart/{product_id}", [HomeController::class, "add_cart"]);
 
@@ -81,17 +87,17 @@ Route::middleware(['admin.auth'])->group(function () {
     Route::get('/delete_f_vendor/{id}', [admin_content_controller::class, 'delete_f_vendor']);
 
 
-    Route :: get('/a_v_show_products',[admin_content_controller::class,'admin_show_vendor_products']);
-    Route :: get('/a_v_delete_product/{product_id}',[admin_content_controller::class,'v_delete_product']);
-    Route :: get('/approve_product/{id}',[admin_content_controller::class,'approve_product']);
+    Route::get('/a_v_show_products', [admin_content_controller::class, 'admin_show_vendor_products']);
+    Route::get('/a_v_delete_product/{product_id}', [admin_content_controller::class, 'v_delete_product']);
+    Route::get('/approve_product/{id}', [admin_content_controller::class, 'approve_product']);
 
 
 
     Route::get('/Customer', [admin_content_controller::class, 'Customer']);
     Route::get('/delete_Customer/{cus_id}', [admin_content_controller::class, 'delete_Customer']);
-    
-    Route :: get('/order',[admin_content_controller::class,'order']);
-    Route :: get('/delete_orders/{product_id}',[admin_content_controller::class,'delete_orders']);
+
+    Route::get('/order', [admin_content_controller::class, 'order']);
+    Route::get('/delete_orders/{product_id}', [admin_content_controller::class, 'delete_orders']);
 
 });
 
@@ -146,15 +152,15 @@ Route::middleware(['vendor.auth'])->group(function () {
     Route::get('/vendor_dashboard', [VendorSignupController::class, 'vendor_dashboard']);
 
     Route::view('welcome', 'welcome');
-    Route :: get('/v_view_product',[admin_content_controller::class,'v_view_product']);
-    Route :: post('/v_add_product',[admin_content_controller::class,'v_add_product']);
-    Route :: get('/v_p_show_products',[admin_content_controller::class,'show_vendor_products']);
-    Route :: get('/v_delete_product/{product_id}',[admin_content_controller::class,'v_delete_product']);
-    Route :: get('/v_edit_product/{product_id}',[admin_content_controller::class,'v_edit_product']);
-    Route :: post('/v_update_product/{product_id}',[admin_content_controller::class,'v_update_product']);
-    Route :: get('/v_orders',[admin_content_controller::class,'v_orders']);
-    Route :: get('/delete_v_orders/{product_id}',[admin_content_controller::class,'delete_v_orders']);
-    Route :: get('/v_show_products',[admin_content_controller::class,'show_approved_vendor_products']);
+    Route::get('/v_view_product', [admin_content_controller::class, 'v_view_product']);
+    Route::post('/v_add_product', [admin_content_controller::class, 'v_add_product']);
+    Route::get('/v_p_show_products', [admin_content_controller::class, 'show_vendor_products']);
+    Route::get('/v_delete_product/{product_id}', [admin_content_controller::class, 'v_delete_product']);
+    Route::get('/v_edit_product/{product_id}', [admin_content_controller::class, 'v_edit_product']);
+    Route::post('/v_update_product/{product_id}', [admin_content_controller::class, 'v_update_product']);
+    Route::get('/v_orders', [admin_content_controller::class, 'v_orders']);
+    Route::get('/delete_v_orders/{product_id}', [admin_content_controller::class, 'delete_v_orders']);
+    Route::get('/v_show_products', [admin_content_controller::class, 'show_approved_vendor_products']);
 });
 
 Route::get('/vendorlogout', function () {
