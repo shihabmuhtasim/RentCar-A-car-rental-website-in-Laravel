@@ -22,10 +22,6 @@ Our mission with Rent Koro is to provide a seamless car rental experience, allow
 - **Sprint 3**: Implemented vendor management system and admin authorization services.
 - **Sprint 4**: Enhanced user interface with details page, order viewing, and integrated a payment gateway.
 
-## Additional Features:
-- Detailed car information pages
-- Dynamic sorting and searching of cars
-- Secure registration and login process with session management
 
 ## Technologies Used:
 - Laravel (Backend)
