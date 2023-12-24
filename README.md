@@ -2,7 +2,9 @@
 ### CSE470: Sec 012 - Group 02
 
 ## Overview
-Rent Koro is a car rental website catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience. We used Scrum methodology following Agile philosophy for this project.
+Rent Koro is a car rental website catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience. We used Scrum methodology following the Agile philosophy for this project.
+## Project Report
+[Rent Koro project report.pdf](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel/files/13760888/Rent.Koro.project.report.pdf)
 
 ### Team Members:
 - [Shihab Muhtasim](https://github.com/shihabmuhtasim)
