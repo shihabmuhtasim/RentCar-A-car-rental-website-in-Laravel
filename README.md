@@ -21,7 +21,7 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 ![Sprint 1 Demo](https://img.youtube.com/vi/PvJOcAq8lk0/0.jpg)
 [Watch Sprint 1 Demo](https://www.youtube.com/watch?v=PvJOcAq8lk0)
 
-#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
+
 
 ### Sprint 2 - Homepage and Cart System
 **Sprint Leader:** Hasin Arman Prokriti
@@ -34,7 +34,7 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 ![Sprint 2 Demo](https://img.youtube.com/vi/-N2VA1o_ehw/0.jpg)
 [Watch Sprint 2 Demo](https://youtu.be/-N2VA1o_ehw)
 
-#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
+
 
 ### Sprint 3 - Vendor Management System
 **Sprint Leader:** Shihab Muhtasim
@@ -47,7 +47,7 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 ![Sprint 3 Demo](https://img.youtube.com/vi/KSO6UKtpnK0/0.jpg)
 [Watch Sprint 3 Demo](https://youtu.be/KSO6UKtpnK0)
 
-#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
+
 
 ### Sprint 4 - User Dashboard and Payment Integration
 **Sprint Leaders:** Hasin Arman Prokriti & Shihab Muhtasim
@@ -60,7 +60,8 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 ![Sprint 4 Demo](https://img.youtube.com/vi/HDI4bKGd-Ok/0.jpg)
 [Watch Sprint 4 Demo](https://youtu.be/HDI4bKGd-Ok)
 
-#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
+
+[![Sprint 1 Demo](https://img.youtube.com/vi/PvJOcAq8lk0/0.jpg)](https://www.youtube.com/watch?v=PvJOcAq8lk0)
 
 ## Conclusion
 Rent Koro is dedicated to enhancing the car rental experience through a user-friendly digital platform. We extend our gratitude to all team members, contributors, and stakeholders for their invaluable support.
