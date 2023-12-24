@@ -1,37 +1,66 @@
-# Rent Koro: A Car Rental Website (CSE470: Sec 012: Group 02)
+# Rent Koro: A Car Rental Website
+### CSE470: Sec 012 - Group 02
 
-## Introduction
-Rent Koro is a comprehensive car rental website designed to cater to a variety of users including admin, vendor, general, and guest. The platform facilitates the listing and renting of cars with a robust system for user interaction and transaction management.
+## Overview
+Rent Koro is a car rental website catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience.
 
-## Project Overview
-Our mission with Rent Koro is to provide a seamless car rental experience, allowing for easy management for vendors and a wide array of options for customers. The website includes features for user authentication, car management, booking, and extensive admin and vendor panel functionalities.
+### Team Members:
+- Shihab Muhtasim (21301610)
+- Hasin Arman Prokriti (20201092)
 
-### Pre-do/General Features for All Users:
-- Login, Registration, Logout & Session Management
+## Sprints
 
-### Specific Requirements:
-- **Admin Panel**: Manage cars, types, brands, view and approve vendor requests, manage orders and customers.
-- **Vendor Management**: Post cars for approval, manage car listings, view book requests.
-- **Home/Shop**: Display cars, detailed view pages, sort and search functionality.
-- **Cart System**: Add to cart, update, delete, and checkout with order confirmation.
-- **User Dashboard**: View and edit profile, view orders, and integrate with a payment gateway.
+### Sprint 1 - Initial Setup and Admin Features
+**Sprint Leader:** Shihab Muhtasim
 
-### Sprint Overviews:
-- **Sprint 1**: Established basic user functionalities and admin panel features.
-- **Sprint 2**: Focused on homepage and cart system development.
-- **Sprint 3**: Implemented vendor management system and admin authorization services.
-- **Sprint 4**: Enhanced user interface with details page, order viewing, and integrated a payment gateway.
+#### Features:
+- **User System:** Registration, login, and session management for admin, general, and vendor users.
+- **Admin Panel:** Car management, category, and brand management, viewing orders, managing customers, and handling vendor requests.
+- **Vendor Registration:** Vendor registration requests handled by admin.
 
+![Sprint 1 Demo](https://img.youtube.com/vi/PvJOcAq8lk0/0.jpg)
+[Watch Sprint 1 Demo](https://www.youtube.com/watch?v=PvJOcAq8lk0)
 
-## Technologies Used:
-- Laravel (Backend)
-- HTML, CSS, JavaScript (Frontend)
+#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
 
-## Project Links:
-- **Project Demo**: [YouTube](https://www.youtube.com/watch?v=PvJOcAq8lk0)
-- **Github Repo**: [RentCar](https://github.com/shihabmuhtasim/RentCar)
+### Sprint 2 - Homepage and Cart System
+**Sprint Leader:** Hasin Arman Prokriti
 
-### Group Members:
-- Shihab Muhtasim  
-- Hasin Arman Prokriti 
+#### Features:
+- **Homepage Display:** Showcasing featured cars with dynamic navbar based on user type.
+- **Car Sorting and Searching:** Enhanced user experience with sorting and search functionalities.
+- **Cart System:** Functionalities for adding to cart, updating, and deleting cars from the cart.
 
+![Sprint 2 Demo](https://img.youtube.com/vi/-N2VA1o_ehw/0.jpg)
+[Watch Sprint 2 Demo](https://youtu.be/-N2VA1o_ehw)
+
+#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
+
+### Sprint 3 - Vendor Management System
+**Sprint Leader:** Shihab Muhtasim
+
+#### Features:
+- **Vendor Panel:** Complete management of vendor activities including posting cars for approval.
+- **Admin-Vendor Interactions:** Admin's approval for vendor posts and monitoring vendor activities.
+- **Vendor Dashboard:** Insights on sales, orders, and product management for vendors.
+
+![Sprint 3 Demo](https://img.youtube.com/vi/KSO6UKtpnK0/0.jpg)
+[Watch Sprint 3 Demo](https://youtu.be/KSO6UKtpnK0)
+
+#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
+
+### Sprint 4 - User Dashboard and Payment Integration
+**Sprint Leaders:** Hasin Arman Prokriti & Shihab Muhtasim
+
+#### Features:
+- **User Dashboard:** Managing personal details and viewing order history.
+- **Order Management:** Options to view and cancel orders.
+- **Payment Gateway:** Integration with SSLCOMMERZ for secure transactions.
+
+![Sprint 4 Demo](https://img.youtube.com/vi/HDI4bKGd-Ok/0.jpg)
+[Watch Sprint 4 Demo](https://youtu.be/HDI4bKGd-Ok)
+
+#### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
+
+## Conclusion
+Rent Koro is dedicated to enhancing the car rental experience through a user-friendly digital platform. We extend our gratitude to all team members, contributors, and stakeholders for their invaluable support.
