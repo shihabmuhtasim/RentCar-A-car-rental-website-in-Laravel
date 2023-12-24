@@ -25,6 +25,7 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 - **Admin Panel:** Car management, category, and brand management, viewing orders, managing customers, and handling vendor requests.
 - **Vendor Registration:** Vendor registration requests are handled by admin.
 
+### Sprint 1 Demo
 [![Sprint 1 Demo](https://img.youtube.com/vi/PvJOcAq8lk0/0.jpg)](https://www.youtube.com/watch?v=PvJOcAq8lk0)
 
 
@@ -36,7 +37,8 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 - **Homepage Display:** Showcasing featured cars with dynamic navbar based on user type.
 - **Car Sorting and Searching:** Enhanced user experience with sorting and search functionalities.
 - **Cart System:** Functionalities for adding to cart, updating, and deleting cars from the cart.
-
+- 
+### Sprint 2 Demo
 [![Sprint 2 Demo](![Screenshot 2023-12-24 104932](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel/assets/92597456/f5196a27-f99c-4b10-b353-110a67e7396f))](https://youtu.be/-N2VA1o_ehw)
 
 
@@ -49,7 +51,8 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 - **Vendor Panel:** Complete management of vendor activities including posting cars for approval.
 - **Admin-Vendor Interactions:** Admin's approval for vendor posts and monitoring vendor activities.
 - **Vendor Dashboard:** Insights on sales, orders, and product management for vendors.
-
+- 
+### Sprint 3 Demo
 [![Sprint 3 Demo](https://img.youtube.com/vi/KSO6UKtpnK0/0.jpg)](https://youtu.be/KSO6UKtpnK0)
 
 
@@ -61,7 +64,8 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 - **User Dashboard:** Managing personal details and viewing order history.
 - **Order Management:** Options to view and cancel orders.
 - **Payment Gateway:** Integration with SSLCOMMERZ for secure transactions.
-
+- 
+### Sprint 4 Demo
 [![Sprint 4 Demo](https://img.youtube.com/vi/HDI4bKGd-Ok/0.jpg)](https://youtu.be/HDI4bKGd-Ok)
 
 #### [GitHub Repository](https://github.com/shihabmuhtasim/RentCar)
