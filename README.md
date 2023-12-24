@@ -37,7 +37,8 @@ Rent Koro is a car rental website catering to different user roles: admin, vendo
 - **Car Sorting and Searching:** Enhanced user experience with sorting and search functionalities.
 - **Cart System:** Functionalities for adding to cart, updating, and deleting cars from the cart.
 
-[![Sprint 2 Demo](https://img.youtube.com/vi/-N2VA1o_ehw/0.jpg)](https://youtu.be/-N2VA1o_ehw)
+[![Sprint 2 Demo](![Screenshot 2023-12-24 104932](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel/assets/92597456/f5196a27-f99c-4b10-b353-110a67e7396f))](https://youtu.be/-N2VA1o_ehw)
+
 
 
 
