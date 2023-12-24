@@ -5,8 +5,8 @@
 Rent Koro is a car rental website catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience. We used Scrum methodology following Agile philosophy for this project.
 
 ### Team Members:
-- Shihab Muhtasim (21301610)
-- Hasin Arman Prokriti (20201092)
+- [Shihab Muhtasim](https://github.com/shihabmuhtasim)
+- [Hasin Arman Prokriti](https://github.com/hasin-arman-prokriti)
 
 ## Sprints
 
