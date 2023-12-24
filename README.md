@@ -2,7 +2,7 @@
 ### CSE470: Sec 012 - Group 02
 
 ## Overview
-Rent Koro is a car rental website catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience.
+Rent Koro is a car rental website catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience. We used Scrum methodology following Agile philosophy for this project.
 
 ### Team Members:
 - Shihab Muhtasim (21301610)
