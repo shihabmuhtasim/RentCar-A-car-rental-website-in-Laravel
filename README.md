@@ -1,5 +1,10 @@
 # Rent Koro: A Car Rental Website
-### CSE470: Sec 012 - Group 02
+[![GitHub top language](https://img.shields.io/github/languages/top/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel?color=f5f5dc)](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel)
+[![GitHub language count](https://img.shields.io/github/languages/count/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel?color=f5f5dc)](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel)
+[![GitHub last commit](https://img.shields.io/github/last-commit/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel?color=f5f5dc)](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel)
+[![GitHub repo file count](https://img.shields.io/github/directory-file-count/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel?color=f5f5dc)](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel)
+[![GitHub repo size](https://img.shields.io/github/repo-size/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel?color=f5f5dc)](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel)
+[![GitHub watchers](https://img.shields.io/github/watchers/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel?style=social)](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel)
 
 ## Overview
 Rent Koro is a car rental website catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience. We used Scrum methodology following the Agile philosophy for this project.
