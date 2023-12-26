@@ -40,7 +40,7 @@ Rent Koro is a car rental website built in Laravel catering to different user ro
 - **Homepage Display:** Showcasing featured cars with dynamic navbar based on user type.
 - **Car Sorting and Searching:** Enhanced user experience with sorting and search functionalities.
 - **Cart System:** Functionalities for adding to cart, updating, and deleting cars from the cart.
-- 
+
 ### Sprint 2 Demo
 [![Sprint 2 Demo](https://img.youtube.com/vi/-N2VA1o_ehw/0.jpg)](https://youtu.be/-N2VA1o_ehw)
 
@@ -54,7 +54,7 @@ Rent Koro is a car rental website built in Laravel catering to different user ro
 - **Vendor Panel:** Complete management of vendor activities including posting cars for approval.
 - **Admin-Vendor Interactions:** Admin's approval for vendor posts and monitoring vendor activities.
 - **Vendor Dashboard:** Insights on sales, orders, and product management for vendors.
-- 
+
 ### Sprint 3 Demo
 [![Sprint 3 Demo](https://img.youtube.com/vi/KSO6UKtpnK0/0.jpg)](https://youtu.be/KSO6UKtpnK0)
 
@@ -67,7 +67,7 @@ Rent Koro is a car rental website built in Laravel catering to different user ro
 - **User Dashboard:** Managing personal details and viewing order history.
 - **Order Management:** Options to view and cancel orders.
 - **Payment Gateway:** Integration with SSLCOMMERZ for secure transactions.
-- 
+
 ### Sprint 4 Demo
 [![Sprint 4 Demo](https://img.youtube.com/vi/HDI4bKGd-Ok/0.jpg)](https://youtu.be/HDI4bKGd-Ok)
 
