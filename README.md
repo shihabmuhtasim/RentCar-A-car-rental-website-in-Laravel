@@ -8,9 +8,10 @@
 
 ## Overview
 Rent Koro is a car rental website built in Laravel catering to different user roles: admin, vendor, general, and guest. Our platform facilitates the renting and listing of cars, providing a seamless rental experience. We used Scrum methodology following the Agile philosophy for this project.
+![16](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel/assets/92597456/fbddfb5a-05a2-4b57-a64c-e9c87ed3b3ae)
+
 ## Project Report
 [Rent Koro project report.pdf](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel/files/13760888/Rent.Koro.project.report.pdf)
-![16](https://github.com/shihabmuhtasim/RentCar-A-car-rental-website-in-Laravel/assets/92597456/fbddfb5a-05a2-4b57-a64c-e9c87ed3b3ae)
 
 ### Team Members:
 - [Shihab Muhtasim](https://github.com/shihabmuhtasim)
