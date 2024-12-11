@@ -61,7 +61,7 @@ Rent Koro is a car rental website built in Laravel catering to different user ro
 
 
 ### Sprint 4 - User Dashboard and Payment Integration
-**Sprint Leaders:** Hasin Arman Prokriti & Shihab Muhtasim
+**Sprint Leader:** Shihab Muhtasim
 
 #### Features:
 - **User Dashboard:** Managing personal details and viewing order history.
